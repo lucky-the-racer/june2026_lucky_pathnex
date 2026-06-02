@@ -3,7 +3,7 @@
 # one hour git+github+EC2 video on yt and configure git on ec2 
 
 
-#L1 and L2 code practice of day1 with 2 hours on theory part to undersytand the code
+#L1 and L2 code practice of day1 with 2 hours on theory part to understand the code
 
 
 
