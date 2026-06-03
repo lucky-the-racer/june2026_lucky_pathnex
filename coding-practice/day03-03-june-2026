@@ -1,0 +1,143 @@
+🔹 Docker
+# Docker Installation & First Container
+docker --version
+docker run ubuntu echo "Hello Pathnex"
+
+
+# Docker File
+FROM ubuntu:22.04
+CMD ["echo", "Hello Pathnex"]
+
+## how to check docker version and run first container using docker
+# practice
+
+docker --version
+docker run ubuntu echo "hello lcuky"
+
+#Dockerfile
+FROM ubuntu:22.04
+CMD ["echo", "Hello lucky"]
+
+
+## practice
+docker --version
+docker run ubuntu echo "hello lcuky"
+
+#Dockerfile
+FROM ubuntu:22.04
+CMD ["echo", "Hello lucky"]
+
+
+## 🔹 Kubernetes Task — Create Nginx Pod
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pathnex-pod
+spec:
+  containers:
+    - name: web
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+# pracrice
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pathnex-pod
+spec:
+  containers:
+    - name: web
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+# pracrice
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pathnex-pod
+spec:
+  containers:
+    - name: web
+      image: nginx:latest
+      ports:
+        - containerPort: 80      
+
+## 🔹 Shell Script — Print Date & Hostname
+
+#!/bin/bash
+echo "Date: $(date)"
+echo "Hostname: $(hostname)"
+
+# practice
+#!/bin/bash
+echo "Date: $(date)"
+echo "Hostname: $(hostname)"
+
+
+# Git Integration
+## 🔹 Jenkins Pipeline — Checkout Git
+You will learn how to **checkout a Git repository** and list files.
+
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Pathnex/sample-java-app.git'
+            }
+        }
+        stage('List Files') {
+            steps {
+                sh 'ls -la'
+            }
+        }
+    }
+}
+
+
+# practice
+
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Pathnex/sample-java-app.git'
+            }
+        }
+        stage('List Files') {
+            steps {
+                sh 'ls -la'
+            }
+        }
+    }
+}
+
+
+## 🔹 GitLab CI — Checkout Git
+You will learn how to **checkout a Git repository in GitLab CI**.
+
+stages:
+  - checkout
+
+git-checkout:
+  stage: checkout
+  script:
+    - git clone https://github.com/Pathnex/sample-java-app.git
+    - cd sample-java-app
+    - ls -la
+
+# practice
+
+stages:
+  - checkout
+
+git-checkout:
+  stage: checkout
+  script:
+    - git clone https://github.com/Pathnex/sample-java-app.git
+    - cd sample-java-app
+    - ls -la
